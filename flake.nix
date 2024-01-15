@@ -37,7 +37,13 @@
             '';
           docs = self.lib.${system}.mkDocs {
             name = "docs";
-            docs = ./.;
+            docs = builtins.path {
+              path = ./.;
+              filter = path: type:
+                builtins.elem (/. + path) [
+                  ./README.md
+                ];
+            };
           };
           default = self.packages.${system}.mkdocs;
         };
