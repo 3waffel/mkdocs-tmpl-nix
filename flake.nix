@@ -24,6 +24,7 @@
                 mkdocs-material
                 mkdocs-redirects
                 pillow
+                mdx-truly-sane-lists
               ];
             } ''
               mkdir -p $out/bin
@@ -81,6 +82,7 @@
 
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
+            self.packages.${system}.default
             alejandra
             direnv
           ];

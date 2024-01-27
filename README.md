@@ -1,5 +1,9 @@
 # MkDocs Template Nix
 
+This repository provides a nix lib for building mkdocs sites with default config. 
+
+## Usage
+
 - Include the module in your flake inputs
   ```nix
   {
@@ -13,7 +17,7 @@
       # ...
       docs = mkdocs-tmpl-nix.lib.${system}.mkDocs {
           name = "docs";
-          docs = "./docs";
+          docs = ./docs;
           extraConfig = {
               "site_name" = "Some Site";
               "site_url" = "https://example.com";
@@ -26,3 +30,12 @@
   ```
   nix build .#docs
   ```
+
+## Formatting test
+
+- list1
+  - list1.1
+  - list1.2
+- list2
+  - list2.1
+  - list2.2
