@@ -15,8 +15,8 @@ This repository provides a nix lib for building mkdocs sites with default config
   ```nix
   {
       # ...
-      docs = mkdocs-tmpl-nix.lib.${system}.mkDocs {
-          name = "docs";
+      example = mkdocs-tmpl-nix.lib.${system}.mkDocs {
+          name = "example";
           docs = ./docs;
           extraConfig = {
               "site_name" = "Some Site";
@@ -28,7 +28,7 @@ This repository provides a nix lib for building mkdocs sites with default config
 
 - Build the package
   ```
-  nix build .#docs
+  nix build .#example
   ```
 
 ## Formatting test
@@ -39,3 +39,11 @@ This repository provides a nix lib for building mkdocs sites with default config
 - list2
   - list2.1
   - list2.2
+
+> [!note]
+> 
+> This is a note.
+
+> [!tip]
+> 
+> This is a tip.

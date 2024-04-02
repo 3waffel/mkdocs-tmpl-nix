@@ -15,6 +15,9 @@ markdown_extensions:
   - pymdownx.tasklist
   - mdx_truly_sane_lists
 
+plugins:
+  - obsidian-support
+
 theme:
   name: "material"
   palette:
